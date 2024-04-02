@@ -27,7 +27,12 @@ console.log(result4); // 0
 *******************************************************************************/
 
 function count(array, cb) {
-  // Your code here 
+  let counter = 0;
+  for (let element of array) {
+    let el = cb(element);
+    if (el) counter++
+  }
+  return counter;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

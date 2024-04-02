@@ -24,8 +24,24 @@ console.log(result3);   // true
 *******************************************************************************/
 
 function mySome(array, cb) {
-    // Your code here 
-}
+//     for (let i = 0; i < array.length; i++) {
+//         let num = array[i];
+//         if (cb(i) === num) {
+// return true;
+//         }
+//         }
+//         return false;
+     let index = 0;
+for (let element of array) {
+        let el = cb(element, index);
+        if (el) {
+            return true;
+        }
+        index++;
+     }
+     return false;
+    }
+
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
