@@ -32,7 +32,17 @@ console.log(
 *******************************************************************************/
 
 let xorSelect = function(array, cb1, cb2) {
-  // Your code here 
+  let newArr = [];
+  for (let element of array) {
+    let el1 = cb1(element);
+    let el2 = cb2(element);
+    if (!el1 && el2) {
+      newArr.push(element);
+    } else if (el1 && !el2) {
+      newArr.push(element);
+    }
+  }
+  return newArr;
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

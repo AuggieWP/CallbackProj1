@@ -23,7 +23,13 @@ console.log(result3); // -1
 *******************************************************************************/
 
 function firstIndex(array, cb) {
-  // Your code here 
+  for (let element of array) {
+    let el = cb(element);
+    if (el) {
+      return array.indexOf(element);
+    }
+  } 
+  return -1;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

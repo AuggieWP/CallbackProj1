@@ -29,7 +29,13 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  // Your code here 
+  for (let element of array) {
+    let el = cb(element);
+    if (el) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

@@ -31,8 +31,11 @@ function exactly(array, num, cb) {
   let counter = 0;
   for (let element of array) {
     let el = cb(element);
-    
+    if (el){
+      counter++
+    }  
   }
+  return (counter === num);
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

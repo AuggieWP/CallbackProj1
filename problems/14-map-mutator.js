@@ -19,7 +19,9 @@ console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
 
 function mapMutator(array, cb) {
-  // Your code here 
+  let newArr = array.map((x) => cb(x));
+  return newArr;
+
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

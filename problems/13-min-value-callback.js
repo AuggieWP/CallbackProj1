@@ -11,9 +11,13 @@ console.log(minValueCallback([64, 25, 49, 9, 100], Math.sqrt));  // 3
 *******************************************************************************/
 
 function minValueCallback(array, cb) {
-    // Your code here 
+    let min = Math.min(...array);
+    
+    if (cb) {
+        return cb(min);     
+    }
+    return min;
 }
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = minValueCallback;
